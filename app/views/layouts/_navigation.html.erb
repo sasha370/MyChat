@@ -1,17 +1,13 @@
 <div class="ui small inverted menu">
 <div class="ui container">
-  <a class="item">
-    Чат
-  </a>
-  <a class="item">
-    Messages
-  </a>
+  <%= link_to "Чат", root_path,  class: "item"%>
+  <%= link_to "Сообщения", root_path,  class: "item"%>
   <div class="right menu">
     <div class="ui dropdown item">
       Личный кабинет <i class="dropdown icon"></i>
       <div class="menu">
         <a class="item">Выйти</a>
-        <a class="item">Войти</a>
+        <%= link_to "Войти", login_path,  class: "item"%>
         <a class="item">Регистрация</a>
       </div>
     </div>
