@@ -10,8 +10,4 @@ User.create username: 'alena', password: 'password'
 User.create username: 'ivan', password: 'password'
 User.create username: 'kolya', password: 'password'
 User.create username: 'Gandalf', password: 'password'
-Message.create body: "Привет, как дела", user: User.first
-Message.create body: "Хорошо", user: User.second
-Message.create body: "Лучше всех", user: User.third
-Message.create body: "Понеслась", user: User.fourth
-Message.create body: "Отлично", user: User.last
+Message.create body: "Привет, как дела?", user: User.first
