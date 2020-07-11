@@ -12,14 +12,14 @@ class SessionsController < ApplicationController
       flash[:success] = "Вы успешно вошли"
       redirect_to root_path
     else
-      flash.now[:error] = " Вы чтото ввели неправильно "
+      flash.now[:error] = "Неправильный логин или пароль"
       render 'new'
     end
   end
 
   def destroy
     session[:user_id] = nil
-    flash[:success] = " Вы вышшли!"
+    flash[:success] = " Вы успешно вышли!"
     redirect_to login_path
   end
 end
