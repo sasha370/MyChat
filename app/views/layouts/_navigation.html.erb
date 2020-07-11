@@ -1,19 +1,23 @@
 <div class="ui small inverted menu">
-<div class="ui container">
-  <%= link_to "Чат", root_path,  class: "item"%>
-  <%= link_to "Сообщения", root_path,  class: "item"%>
-  <div class="right menu">
-    <div class="ui dropdown item">
-      Личный кабинет <i class="dropdown icon"></i>
-      <div class="menu">
-        <a class="item">Выйти</a>
-        <%= link_to "Войти", login_path,  class: "item"%>
-        <a class="item">Регистрация</a>
+  <div class="ui container">
+    <%= link_to "Чат", root_path, class: "item" %>
+    <%= link_to "Сообщения", root_path, class: "item" %>
+    <div class="right menu">
+      <div class="ui dropdown item">
+        Личный кабинет <i class="dropdown icon"></i>
+        <div class="menu">
+          <% if logged_in? %>
+            <%= link_to "Выйти", logout_path, method: :delete, class: "item" %>
+          <% else %>
+            <%= link_to "Войти", login_path, class: "item" %>
+          <% end %>
+        </div>
       </div>
-    </div>
-    <div class="item">
-      <div class="ui primary button">Sign Up</div>
+      <% if !logged_in? %>
+        <div class="item">
+          <%= link_to "Войти", login_path, class: "ui primary button" %>
+        </div>
+      <% end %>
     </div>
   </div>
-</div>
 </div>
