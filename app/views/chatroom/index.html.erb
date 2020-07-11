@@ -12,16 +12,17 @@
 
         </div>
       </div>
-      <div class="extra content">
-        <form class="ui reply form">
-          <div class="ui fluid icon input">
-            <input type="text" placeholder="Введите сообщение">
-            <i class="bordered inverted orange edit icon"></i>
-            <div class="field">
 
+      <div class="extra content">
+        <%= form_for(@message, html: { class: "ui reply form", role: "form" }, url: message_path) do |f| %>
+
+          <div class="ui fluid icon input">
+            <%= f.text_field :body, placeholder: "Введите сообщение" %>
+            <%= f.button '<i class="bordered inverted orange edit icon"></i>'.html_safe %>
+            <div class="field">
             </div>
           </div>
-        </form>
+        <% end %>
       </div>
     </div>
   </div>
