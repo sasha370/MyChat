@@ -12,7 +12,7 @@ class SessionsController < ApplicationController
     if user && user.authenticate(params[:session][:password])
       session[:user_id] = user.id
       flash[:success] = "Вы успешно вошли"
-      redirect_to root_path
+      redirect_to chatroom_path
     else
       flash.now[:error] = "Неправильный логин или пароль"
       render 'new'
@@ -30,7 +30,7 @@ class SessionsController < ApplicationController
   def logged_in_redirect
     if logged_in?
       flash[:error] = " Вы уже вoшли"
-      redirect_to root_path
+      redirect_to chatroom_path
     end
   end
 

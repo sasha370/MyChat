@@ -1,24 +1,13 @@
-# README
+Приложение "MyChat"
+Написано для изучения RoR и ActiveCable
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Последовательность:
+1) Создан простые Модели User и Message
+2) Содан дизайн с помощью Semantic UI
+3) Прописаны контроллеры. вьюхи
+4) Прописан ActiveCable для обновления чата налету
+5) прописваны скрипты для кнопок, обновления\скроллинга чата
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+савмостоятельно сделано:
+- регистрация пользователей с валидацией
+  
