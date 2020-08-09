@@ -17,7 +17,7 @@ gem 'webpacker', '~> 4.0'
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.7'
-# gem 'redis'
+#
 gem 'rake'
 gem 'sassc'
 gem 'semantic-ui-sass'
@@ -55,6 +55,7 @@ end
 
 group :production do
   gem 'pg'
+  gem 'redis'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
